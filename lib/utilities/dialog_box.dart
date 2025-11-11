@@ -4,61 +4,43 @@ import 'package:todo_app/utilities/my_button.dart';
 class DialogBox extends StatelessWidget {
   final controller;
   final VoidCallback onSave;
-  final VoidCallback onCancel;
-  const DialogBox({
-    super.key,
-    required this.controller,
-    required this.onSave,
-    required this.onCancel,
-  });
+  const DialogBox({super.key, required this.controller, required this.onSave});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        AlertDialog(
-          backgroundColor: Colors.black,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.grey[850]!),
-            borderRadius: BorderRadiusDirectional.circular(5),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: Color(0xFF121212),
           ),
-          title: Text(
-            "E n t e r  N e w  T a s k",
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.grey[200], fontSize: 18),
-          ),
-          content: Container(
-            decoration: BoxDecoration(color: Colors.black),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: 250,
-                  child: TextField(
-                    style: TextStyle(color: Colors.grey[200], fontSize: 15),
+          child: Padding(
+            padding: EdgeInsetsGeometry.fromLTRB(20, 0, 20, 15),
+            child: SizedBox(
+              height: 250,
+              child: Column(
+                children: [
+                  AlertDialog(backgroundColor: Color(0xFF121212)),
+                  TextField(
                     controller: controller,
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                     decoration: InputDecoration(
+                      hintText: "Enter New Task",
+                      hintStyle: TextStyle(color: Colors.grey[700]),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[850]!),
-                        borderRadius: BorderRadius.circular(5),
+                        borderSide: BorderSide(color: Colors.grey[800]!),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[850]!),
-                        borderRadius: BorderRadius.circular(5),
+                        borderSide: BorderSide(color: Colors.grey[800]!),
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    MyButton(btnName: "Save", onPressed: onSave),
-                    const SizedBox(width: 2),
-                    MyButton(btnName: "Cancel", onPressed: onCancel),
-                  ],
-                ),
-              ],
+                  const SizedBox(height: 30),
+                  MyButton(btnName: "SAVE", onPressed: onSave),
+                ],
+              ),
             ),
           ),
         ),

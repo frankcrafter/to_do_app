@@ -16,14 +16,14 @@ class Task extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsGeometry.fromLTRB(20, 20, 20, 0),
+      padding: EdgeInsetsGeometry.fromLTRB(15, 15, 15, 0),
       child: Dismissible(
         key: Key(taskName),
         direction: DismissDirection.endToStart,
         onDismissed: onDismissed,
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey[850]!),
+            border: Border.all(color: Color(0xFF1E1E1E)),
             color: Colors.black,
             borderRadius: BorderRadiusDirectional.circular(5),
           ),
@@ -32,11 +32,11 @@ class Task extends StatelessWidget {
             child: Row(
               children: [
                 Transform.scale(
-                  scale: 1.15,
+                  scale: 1.2,
                   child: Checkbox(
                     side: BorderSide(color: Colors.white, width: 1),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(5),
+                      borderRadius: BorderRadiusGeometry.circular(4),
                     ),
                     activeColor: Colors.transparent,
                     checkColor: Colors.white,
@@ -49,13 +49,13 @@ class Task extends StatelessWidget {
                   child: Text(
                     taskName.toUpperCase(),
                     style: TextStyle(
-                      color: Colors.white.withOpacity(isCompleted ? 0.8 : 1.0),
+                      color: Colors.white.withOpacity(isCompleted ? 0.7 : 1.0),
                       fontSize: 16,
                       decoration: isCompleted
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
                       decorationColor: Colors.grey[400],
-                      decorationThickness: 1.5,
+                      decorationThickness: 2,
                     ),
                   ),
                 ),

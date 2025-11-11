@@ -14,9 +14,9 @@ class _HomePageState extends State<HomePage> {
 
   List taskList = [
     ['code new app', true],
-    ['do grocery', false],
+    ['get groceries', false],
     ['go to the gym', true],
-    ['do paperwork', false],
+    ['do homerwork', true],
   ];
 
   // confirm Checkbox
@@ -47,14 +47,10 @@ class _HomePageState extends State<HomePage> {
   // enter new task
   void enterNewTask() {
     setState(() {
-      showDialog(
+      showModalBottomSheet(
         context: context,
         builder: (context) {
-          return DialogBox(
-            controller: _controller,
-            onSave: saveNewTask,
-            onCancel: Navigator.of(context).pop,
-          );
+          return DialogBox(controller: _controller, onSave: saveNewTask);
         },
       );
       _controller.clear();
@@ -73,10 +69,10 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.grey[850]!),
-          borderRadius: BorderRadiusGeometry.circular(5),
+          side: BorderSide(color: Colors.grey[900]!),
+          borderRadius: BorderRadiusGeometry.circular(10),
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF121212),
         onPressed: enterNewTask,
         child: Icon(Icons.add, color: Colors.white),
       ),

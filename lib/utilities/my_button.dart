@@ -8,21 +8,24 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 105,
-      height: 40,
+      width: 250,
+      height: 60,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            side: BorderSide(width: 1, color: Colors.grey[900]!),
             borderRadius: BorderRadiusGeometry.circular(5),
           ),
           backgroundColor: Colors.grey[900],
-          foregroundColor: Colors.white,
+          foregroundColor: Colors.grey[300],
         ),
         onPressed: onPressed,
         child: Text(
           btnName,
-          style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 15,
+            letterSpacing: 2,
+          ),
         ),
       ),
     );
