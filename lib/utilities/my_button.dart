@@ -8,16 +8,16 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 100,
+      width: 105,
       height: 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            side: BorderSide(width: 1, color: Colors.white10),
-            borderRadius: BorderRadiusGeometry.circular(3),
+            side: BorderSide(width: 1, color: Colors.grey[900]!),
+            borderRadius: BorderRadiusGeometry.circular(5),
           ),
-          backgroundColor: Colors.grey[300],
-          foregroundColor: Colors.black,
+          backgroundColor: Colors.grey[900],
+          foregroundColor: Colors.white,
         ),
         onPressed: onPressed,
         child: Text(

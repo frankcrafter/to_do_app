@@ -73,10 +73,10 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.white12),
-          borderRadius: BorderRadiusGeometry.circular(7),
+          side: BorderSide(color: Colors.grey[850]!),
+          borderRadius: BorderRadiusGeometry.circular(5),
         ),
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.black,
         onPressed: enterNewTask,
         child: Icon(Icons.add, color: Colors.white),
       ),

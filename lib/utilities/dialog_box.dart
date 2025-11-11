@@ -21,7 +21,7 @@ class DialogBox extends StatelessWidget {
           backgroundColor: Colors.black,
           shape: RoundedRectangleBorder(
             side: BorderSide(color: Colors.grey[850]!),
-            borderRadius: BorderRadiusDirectional.circular(3),
+            borderRadius: BorderRadiusDirectional.circular(5),
           ),
           title: Text(
             "E n t e r  N e w  T a s k",
@@ -40,11 +40,11 @@ class DialogBox extends StatelessWidget {
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey[850]!),
-                        borderRadius: BorderRadius.circular(2),
+                        borderRadius: BorderRadius.circular(5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey[850]!),
-                        borderRadius: BorderRadius.circular(2),
+                        borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                   ),
@@ -54,6 +54,7 @@ class DialogBox extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     MyButton(btnName: "Save", onPressed: onSave),
+                    const SizedBox(width: 2),
                     MyButton(btnName: "Cancel", onPressed: onCancel),
                   ],
                 ),

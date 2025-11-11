@@ -25,7 +25,7 @@ class Task extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey[850]!),
             color: Colors.black,
-            borderRadius: BorderRadiusDirectional.circular(4),
+            borderRadius: BorderRadiusDirectional.circular(5),
           ),
           child: Padding(
             padding: EdgeInsetsGeometry.fromLTRB(10, 15, 40, 15),
@@ -36,7 +36,7 @@ class Task extends StatelessWidget {
                   child: Checkbox(
                     side: BorderSide(color: Colors.white, width: 1),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(2),
+                      borderRadius: BorderRadiusGeometry.circular(5),
                     ),
                     activeColor: Colors.transparent,
                     checkColor: Colors.white,
@@ -49,13 +49,13 @@ class Task extends StatelessWidget {
                   child: Text(
                     taskName.toUpperCase(),
                     style: TextStyle(
-                      color: Colors.white.withOpacity(isCompleted ? 0.5 : 1.0),
-                      fontSize: 15,
+                      color: Colors.white.withOpacity(isCompleted ? 0.8 : 1.0),
+                      fontSize: 16,
                       decoration: isCompleted
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
-                      decorationColor: Colors.grey[700],
-                      decorationThickness: 4,
+                      decorationColor: Colors.grey[400],
+                      decorationThickness: 1.5,
                     ),
                   ),
                 ),

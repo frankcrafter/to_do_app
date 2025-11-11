@@ -1,6 +1,6 @@
 # T O D O  A P P
 
-my first clean application developed in flutter 🐦
+MY FIRST CLEAN APPLICATION DEVELOPED IN FLUTTER 🐦
 
+![example](./images/example1.png)
 ![example](./images/example.png)
-
