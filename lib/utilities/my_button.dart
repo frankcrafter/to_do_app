@@ -8,7 +8,7 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 250,
+      width: 230,
       height: 60,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -22,8 +22,8 @@ class MyButton extends StatelessWidget {
         child: Text(
           btnName,
           style: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            fontSize: 13,
             letterSpacing: 2,
           ),
         ),

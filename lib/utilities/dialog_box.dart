@@ -17,7 +17,7 @@ class DialogBox extends StatelessWidget {
             color: Color(0xFF121212),
           ),
           child: Padding(
-            padding: EdgeInsetsGeometry.fromLTRB(20, 0, 20, 15),
+            padding: EdgeInsetsGeometry.fromLTRB(20, 0, 20, 0),
             child: SizedBox(
               height: 250,
               child: Column(
@@ -25,15 +25,18 @@ class DialogBox extends StatelessWidget {
                   AlertDialog(backgroundColor: Color(0xFF121212)),
                   TextField(
                     controller: controller,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.grey[300]),
                     decoration: InputDecoration(
                       hintText: "Enter New Task",
                       hintStyle: TextStyle(color: Colors.grey[700]),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[800]!),
+                        borderSide: BorderSide(color: Colors.grey[850]!),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[800]!),
+                        borderSide: BorderSide(
+                          width: 2,
+                          color: Colors.grey[800]!,
+                        ),
                       ),
                     ),
                   ),
