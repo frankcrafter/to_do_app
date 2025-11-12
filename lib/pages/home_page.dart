@@ -11,11 +11,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _controller = TextEditingController();
+  int currentIndex = 0;
 
   List taskList = [
     ['code new app', true],
     ['get groceries', false],
-    ['go to the gym', true],
+    ['go to the gym', false],
     ['do homerwork', true],
   ];
 
@@ -67,14 +68,20 @@ class _HomePageState extends State<HomePage> {
         title: Text("T O D O  A P P"),
         elevation: 0,
       ),
-      floatingActionButton: FloatingActionButton(
-        shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.grey[900]!),
-          borderRadius: BorderRadiusGeometry.circular(10),
+      floatingActionButton: SizedBox(
+        height: 50,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.grey[200],
+          ),
+          onPressed: enterNewTask,
+          child: Text("+  Add Task"),
         ),
-        backgroundColor: Color(0xFF121212),
-        onPressed: enterNewTask,
-        child: Icon(Icons.add, color: Colors.white),
       ),
       body: ListView.builder(
         itemCount: taskList.length,

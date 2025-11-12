@@ -23,23 +23,23 @@ class Task extends StatelessWidget {
         onDismissed: onDismissed,
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xFF1E1E1E)),
+            border: Border.all(color: Colors.grey[850]!),
             color: Colors.black,
             borderRadius: BorderRadiusDirectional.circular(5),
           ),
           child: Padding(
-            padding: EdgeInsetsGeometry.fromLTRB(10, 15, 40, 15),
+            padding: EdgeInsetsGeometry.fromLTRB(10, 15, 10, 15),
             child: Row(
               children: [
                 Transform.scale(
                   scale: 1.2,
                   child: Checkbox(
-                    side: BorderSide(color: Colors.white, width: 1),
+                    side: BorderSide(color: Colors.grey[400]!, width: 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadiusGeometry.circular(4),
                     ),
                     activeColor: Colors.transparent,
-                    checkColor: Colors.white,
+                    checkColor: Colors.grey[200],
                     value: isCompleted,
                     onChanged: onChanged,
                   ),
@@ -49,7 +49,9 @@ class Task extends StatelessWidget {
                   child: Text(
                     taskName.toUpperCase(),
                     style: TextStyle(
-                      color: Colors.white.withOpacity(isCompleted ? 0.7 : 1.0),
+                      color: Colors.grey[200]!.withOpacity(
+                        isCompleted ? 0.6 : 1.0,
+                      ),
                       fontSize: 16,
                       decoration: isCompleted
                           ? TextDecoration.lineThrough

@@ -22,25 +22,28 @@ class DialogBox extends StatelessWidget {
               height: 250,
               child: Column(
                 children: [
-                  AlertDialog(backgroundColor: Color(0xFF121212)),
+                  AlertDialog(),
                   TextField(
                     controller: controller,
-                    style: TextStyle(color: Colors.grey[300]),
+                    style: TextStyle(color: Colors.grey[200]),
                     decoration: InputDecoration(
                       hintText: "Enter New Task",
                       hintStyle: TextStyle(color: Colors.grey[700]),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey[850]!),
+                        borderSide: BorderSide(
+                          width: 1.5,
+                          color: Colors.grey[700]!,
+                        ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          width: 2,
+                          width: 2.5,
                           color: Colors.grey[800]!,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 40),
                   MyButton(btnName: "SAVE", onPressed: onSave),
                 ],
               ),
