@@ -45,6 +45,15 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  // empty textfield
+  String? myValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return '';
+    }
+    saveNewTask();
+    return null;
+  }
+
   // enter new task
   void enterNewTask() {
     setState(() {
@@ -52,7 +61,11 @@ class _HomePageState extends State<HomePage> {
         context: context,
         backgroundColor: Color(0xFF080808),
         builder: (context) {
-          return DialogBox(controller: _controller, onSave: saveNewTask);
+          return DialogBox(
+            validator: (value) => myValidator(_controller.text),
+            controller: _controller,
+            onSave: saveNewTask,
+          );
         },
       );
       _controller.clear();
@@ -66,7 +79,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        title: Text("T O D O  A P P"),
+        title: Text("TODO APP", style: TextStyle(letterSpacing: 5)),
         elevation: 0,
       ),
       floatingActionButton: SizedBox(

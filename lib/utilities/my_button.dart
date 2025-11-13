@@ -12,8 +12,8 @@ class MyButton extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey[300],
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 2, color: Colors.grey[900]!),
-          borderRadius: BorderRadius.circular(3),
+          side: BorderSide(width: 2, color: Colors.grey[850]!),
+          borderRadius: BorderRadius.circular(10),
         ),
         onPressed: onPressed,
         child: icon,
