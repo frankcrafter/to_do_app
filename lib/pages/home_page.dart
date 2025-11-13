@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       showModalBottomSheet(
         context: context,
-        backgroundColor: Color(0xFF080808),
+        backgroundColor: Color(0xFF121212),
         builder: (context) {
           return DialogBox(
             validator: (value) => myValidator(_controller.text),
@@ -75,9 +75,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF0A0A0A),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF0A0A0A),
         foregroundColor: Colors.white,
         title: Text("TODO APP", style: TextStyle(letterSpacing: 5)),
         elevation: 0,
